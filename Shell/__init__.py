@@ -242,6 +242,7 @@ class NativeWindow(QMainWindow):
                                         "background-color:rgba(0,0,0,0);"
                                         "color:rgb(255,255,255)"
                                         "}")
+            self.raise_()
         else:
             self.titlebackground.setStyleSheet("QLabel {"
                                                "background-color:rgba(50,50,50,1);"
