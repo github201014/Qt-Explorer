@@ -1,8 +1,6 @@
 from ctypes import (Structure, POINTER, c_int)
 from ctypes.wintypes import (POINT, HWND, UINT, RECT)
 from enum import Enum
-
-
 class MINMAXINFO(Structure):
     _fields_ = [
         ("ptReserved", POINT),
@@ -26,14 +24,11 @@ class NCCALCSIZE_PARAMS(Structure):
         ('rgrc', RECT*3),
         ('lppos', POINTER(PWINDOWPOS))
     ]
-
 class DWMNCRENDERINGPOLICY(Enum):
     DWMNCRP_USEWINDOWSTYLE = 0
     DWMNCRP_DISABLED = 1
     DWMNCRP_ENABLED = 2
     DWMNCRP_LAS = 3
-
-
 class DWMWINDOWATTRIBUTE(Enum):
     DWMWA_NCRENDERING_ENABLED = 1
     DWMWA_NCRENDERING_POLICY = 2
@@ -51,8 +46,6 @@ class DWMWINDOWATTRIBUTE(Enum):
     DWMWA_CLOAKED = 14
     DWMWA_FREEZE_REPRESENTATION = 25
     DWMWA_LAST = 16
-
-
 class MARGINS(Structure):
     _fields_ = [
         ("cxLeftWidth", c_int),
